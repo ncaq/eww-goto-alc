@@ -15,6 +15,9 @@
 
 (defun w3m-goto-alc (word)
   (interactive (list (read-string "" (thing-at-point 'word) 'w3m-goto-alc-history)))
-  (w3m-browse-url-other-window (alc-word-url word)))
+
+  (let ((w3m-default-display-inline-images nil))
+    (w3m-browse-url-other-window (alc-word-url word)))
+  )
 
 (provide 'w3m-goto-alc)
