@@ -1,24 +1,24 @@
-;;; w3m-goto-alc-autoloads.el --- automatically extracted autoloads
+;;; eww-goto-alc-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
 
-;;;### (autoloads (w3m-goto-alc) "w3m-goto-alc" "w3m-goto-alc.el"
-;;;;;;  (21549 3902 737800 400000))
-;;; Generated autoloads from w3m-goto-alc.el
+;;;### (autoloads nil "eww-goto-alc" "eww-goto-alc.el" (21744 40836
+;;;;;;  220870 277000))
+;;; Generated autoloads from eww-goto-alc.el
 
-(autoload 'w3m-goto-alc "w3m-goto-alc" "\
+(autoload 'eww-goto-alc "eww-goto-alc" "\
 
 
 \(fn WORD)" t nil)
 
 ;;;***
 
-(provide 'w3m-goto-alc-autoloads)
+(provide 'eww-goto-alc-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
 ;; coding: utf-8
 ;; End:
-;;; w3m-goto-alc-autoloads.el ends here
+;;; eww-goto-alc-autoloads.el ends here

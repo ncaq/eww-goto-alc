@@ -1,24 +1,21 @@
 ;; -*- lexical-binding: t -*-
 
-(require 'w3m)
+(require 'eww)
 
-(defun w3m-browse-url-other-window (url &optional newwin)
-  (let ((w3m-pop-up-windows t))
-    (if (one-window-p)
-        (split-window-right))
-    (other-window 1)
-    (w3m-browse-url url newwin)))
+(defun eww-browse-url-other-window (url &optional newwin)
+  (if (one-window-p)
+      (split-window-right))
+  (other-window 1)
+  (eww-browse-url url newwin))
 
 (defun alc-word-url (word)
   (concat "http://eow.alc.co.jp/search?q=" word "#resultsList"))
 
-(defvar w3m-goto-alc-history)
+(defvar eww-goto-alc-history)
 
 ;;;###autoload
-(defun w3m-goto-alc (word)
-  (interactive (list (read-string "" (thing-at-point 'word) 'w3m-goto-alc-history)))
+(defun eww-goto-alc (word)
+  (interactive (list (read-string "" (thing-at-point 'word) 'eww-goto-alc-history)))
+  (eww-browse-url-other-window (alc-word-url word)))
 
-  (let ((w3m-default-display-inline-images nil))
-    (w3m-browse-url-other-window (alc-word-url word))))
-
-(provide 'w3m-goto-alc)
+(provide 'eww-goto-alc)
